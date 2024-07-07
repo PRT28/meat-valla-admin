@@ -1,0 +1,14 @@
+[debug] [2024-07-07T18:40:29.591Z] ----------------------------------------------------------------------
+[debug] [2024-07-07T18:40:29.593Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\atush\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-07-07T18:40:29.594Z] CLI Version:   13.13.0
+[debug] [2024-07-07T18:40:29.594Z] Platform:      win32
+[debug] [2024-07-07T18:40:29.594Z] Node Version:  v20.11.0
+[debug] [2024-07-07T18:40:29.594Z] Time:          Mon Jul 08 2024 00:10:29 GMT+0530 (India Standard Time)
+[debug] [2024-07-07T18:40:29.594Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-07T18:40:29.655Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-07T18:40:29.656Z] > authorizing via signed-in user (prithvirajtiwari28@gmail.com)
+[debug] [2024-07-07T18:40:29.656Z] [iam] checking project meat-delivery-c9079 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-07T18:40:29.658Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/meat-delivery-c9079:testIamPermissions [none]
+[debug] [2024-07-07T18:40:29.658Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/meat-delivery-c9079:testIamPermissions x-goog-quota-user=projects/meat-delivery-c9079
+[debug] [2024-07-07T18:40:29.658Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/meat-delivery-c9079:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}

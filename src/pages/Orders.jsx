@@ -5,10 +5,11 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
 import { collection, query, getDocs } from "firebase/firestore";
-import { db } from '../utils/firebase';
+import { db } from '../firebase';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
+import { Timestamp } from 'firebase/firestore';
 
 
 export default function Orders() {
@@ -29,6 +30,15 @@ export default function Orders() {
       setData(temp);
 
     }
+
+    const dateHandle = dob => {
+      const dateTime = new Timestamp(dob?.seconds, dob?.nanoseconds);
+      const date = dateTime.toDate();
+
+      const monthMap = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      return `${date.getDate()} ${monthMap[date.getMonth()]} ${date.getFullYear()}`
+    }
+
 
     React.useEffect(() => {
       getData();
@@ -90,7 +100,7 @@ export default function Orders() {
                         <TableBody>
                         {data.map((row) => (
                             <TableRow key={row.id}>
-                            <TableCell>{row.date}</TableCell>
+                            <TableCell>{dateHandle(row.date)}</TableCell>
                             <TableCell>{row.user}</TableCell>
                             <TableCell>{row.address}</TableCell>
                             <TableCell>{row.total}</TableCell>

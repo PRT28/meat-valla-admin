@@ -4,7 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
-import { db } from '../utils/firebase';
+import { db } from '../firebase';
 import { collection, query, getDocs } from "firebase/firestore";
 import { Timestamp } from 'firebase/firestore';
 
@@ -32,7 +32,7 @@ export default function Customers() {
     const dateHandle = dob => {
       const dateTime = new Timestamp(dob.seconds, dob.nanoseconds);
       const date = dateTime.toDate();
-      
+
       const monthMap = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
       return `${date.getDate()} ${monthMap[date.getMonth()]} ${date.getFullYear()}`
     }

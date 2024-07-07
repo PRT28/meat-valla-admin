@@ -8,7 +8,7 @@ import Chart from '../components/Chart/Chart';
 import Deposits from '../components/Deposits/Deposits';
 import Orders from '../components/OrdersSmall/OrdersSmall';
 import { collection, query, getDocs, where, limit  } from "firebase/firestore";
-import { db } from '../utils/firebase';
+import { db } from '../firebase';
 
 
 export default function Home() {

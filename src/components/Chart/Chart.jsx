@@ -44,7 +44,7 @@ export default function Chart({data}) {
           ]}
           yAxis={[
             {
-              label: 'Sales ($)',
+              label: 'Sales',
               labelStyle: {
                 ...theme.typography.body1,
                 fill: theme.palette.text.primary,
